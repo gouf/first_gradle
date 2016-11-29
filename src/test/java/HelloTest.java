@@ -10,4 +10,11 @@ public class HelloTest {
     Hello hello = new Hello();
     assertThat(hello.getMessage(), is("Hello"));
   }
+
+  @Test
+  public void createInstanceTest() {
+    Hello hello = new Hello();
+    String className = hello.getClass().getName();
+    assertThat(className, is("sample.Hello"));
+  }
 }
